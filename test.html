@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>777 老虎機遊戲</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .slot-machine {
+            margin: 20px auto;
+            width: 300px;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            background-color: #333;
+            padding: 20px;
+        }
+
+        .reels {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+
+        .reel-container {
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 5px;
+            background-color: #444;
+            box-shadow: 0 0 5px #000;
+        }
+
+        .symbol {
+            font-size: 3rem;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #f90;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .controls button:hover {
+            background-color: #e80;
+        }
+
+        .status {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎰 777 老虎機 🎰</h1>
+    <div class="slot-machine">
+        <div class="reels">
+            <div class="reel-container">
+                <div class="symbol" id="reel1">🍒</div>
+            </div>
+            <div class="reel-container">
+                <div class="symbol" id="reel2">🍋</div>
+            </div>
+            <div class="reel-container">
+                <div class="symbol" id="reel3">⭐</div>
+            </div>
+        </div>
+        <div class="status">
+            餘額：<span id="balance">10000</span> <br>
+            累積獎金池：<span id="jackpot">0</span>
+        </div>
+        <div class="controls">
+            <input type="number" id="betAmount" placeholder="下注金額" min="1">
+            <button id="startBtn">開始旋轉</button>
+            <button id="stopBtn">停止旋轉</button>
+        </div>
+        <div class="message" id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
